@@ -1,0 +1,17 @@
+{
+  "name": "dot-com",
+  "description": "Personal website for Rob Erekson",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roberekson/dot-com.git"
+  },
+  "author": "Rob Erekson <roberekson@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/roberekson/dot-com/issues"
+  },
+  "homepage": "https://github.com/roberekson/dot-com#readme"
+}
