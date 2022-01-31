@@ -17,6 +17,7 @@ const buildImages: typeof TaskFunction = () => (
   gulp.src(`${paths.images}/**/*`)
     .pipe(imagemin([
       imagemin.mozjpeg({ quality: 80, progressive: true }),
+      imagemin.optipng(),
     ], { silent: true }))
     .pipe(gulp.dest(`${paths.public}/images`))
 );
