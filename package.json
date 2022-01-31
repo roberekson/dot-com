@@ -3,6 +3,8 @@
   "description": "Personal website for Rob Erekson",
   "private": true,
   "scripts": {
+    "build": "tsc ./build/gulpfile.ts && npx gulp build --gulpfile ./build/gulpfile.js",
+    "watch": "tsc ./build/gulpfile.ts && gulp watch --gulpfile ./build/gulpfile.js",
     "start": "docker compose up -d",
     "stop": "docker compose stop",
     "destroy": "docker composer destroy",
