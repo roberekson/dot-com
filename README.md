@@ -53,7 +53,6 @@ $ npm run watch
 No project is ever finished, right? And what better place to keep toying around then a personal site? Below is a list of things I'll get to adding and/or updating eventually. I promise!
 
 * Page navigation
-* Dark mode support
 * Sticky header
 * Unit testing for any eventually-added JavaScript
 * Publishing pipeline using Github's Travis or a Jenkins container
