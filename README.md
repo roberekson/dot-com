@@ -45,19 +45,19 @@ Watches the `src` directory for changes and re-builds the assets for the public 
 **NOTE:** The `build` command needs to be run once before starting the `watch` process.
 
 ```sh
-$ npm run watcy
+$ npm run watch
 ```
 
 ## TODOs
 
 No project is ever finished, right? And what better place to keep toying around then a personal site? Below is a list of things I'll get to adding and/or updating eventually. I promise!
 
-* Site navigation
+* Page navigation
 * Accessibility
 * Dark mode support
 * Sticky header
 * Unit testing for any eventually-added JavaScript
-* Publishing pipeline Github's Travis or a Jenkins container
+* Publishing pipeline using Github's Travis or a Jenkins container
 * 2000s era web counter?
 * Blog posts (someday...right!?)
 
