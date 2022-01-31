@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "tsc ./build/gulpfile.ts && npx gulp build --gulpfile ./build/gulpfile.js",
-    "watch": "tsc ./build/gulpfile.ts && gulp watch --gulpfile ./build/gulpfile.js",
+    "watch": "tsc ./build/gulpfile.ts && npx gulp build --gulpfile ./build/gulpfile.js && npx gulp watch --gulpfile ./build/gulpfile.js",
     "start": "docker compose up -d",
     "stop": "docker compose stop",
     "destroy": "docker composer destroy",
@@ -23,6 +23,7 @@
     "@types/node": "^17.0.13",
     "gulp": "^4.0.2",
     "gulp-debug": "^4.0.0",
+    "gulp-imagemin": "^7.1.0",
     "gulp-sass": "^5.1.0",
     "gulp-typescript": "^6.0.0-alpha.1",
     "reset-css": "^5.0.1",
