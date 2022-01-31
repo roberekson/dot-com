@@ -93,6 +93,11 @@ p {
     strong {
         font-weight: tokens.$font-weight-bold;
     }
+
+    &.intro {
+        font-size: 1.2rem;
+        font-weight: tokens.$font-weight-light;
+    }
 }
 
 dl {
