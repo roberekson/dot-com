@@ -1,0 +1,156 @@
+@use './tokens';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import '../../node_modules/reset-css/reset';
+
+:root {
+    --primary-color: #{tokens.$color-primary};
+    --secondary-color-light: #{tokens.$color-secondary-light};
+    --secondary-color: #{tokens.$color-secondary};
+    --secondary-color-dark: #{tokens.$color-secondary-dark};
+    --background-color: #{tokens.$color-light};
+    --foreground-color: #{tokens.$color-secondary-dark};
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--foreground-color);
+    border-top: 10px var(--primary-color) solid;
+    font-family: 'Inter', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a {
+    color: var(--secondary-color);
+
+    :hover {
+        color: var(--secondary-color-light);
+    }
+}
+
+.site-wrapper {
+    min-width: 800px;
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+section {
+    padding: 0 18px;
+    margin: 96px -18px 0 -18px;
+
+    &.professional {
+        margin-top: 48px;
+    }
+}
+
+header {
+    padding: 0 18px;
+    margin-top: 48px;
+}
+
+main {
+    margin-top: 48px;
+    padding: 18px;
+
+    > p:first-of-type {
+        font-size: 1.2rem;
+        font-weight: tokens.$font-weight-light;
+    }
+}
+
+footer {
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+    padding-bottom: 96px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 48px;
+
+    a {
+        color: var(--background-color);
+    }
+
+    i {
+        margin-right: 12px;
+    }
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: tokens.$font-weight-light;
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: tokens.$font-weight-bold;
+}
+
+h3 {
+    font-size: 1.8rem;
+    font-weight: tokens.$font-weight-regular;
+    margin-bottom: 48px;
+}
+
+h4 {
+    font-size: 1.4rem;
+    font-weight: tokens.$font-weight-bold;
+    margin-bottom: 8px;
+    margin-top: 48px;
+}
+
+h5, .heading5 {
+    font-size: 1.2rem;
+    font-weight: tokens.$font-weight-light;
+    margin-bottom: 8px;
+
+
+    strong {
+        font-weight: tokens.$font-weight-medium;
+
+        &::after {
+            content: '|';
+            font-weight: tokens.$font-weight-light;
+            margin: 0 8px;
+        }
+    }
+}
+
+p {
+    line-height: 1.5em;
+    font-weight: tokens.$font-weight-light;
+
+    + p {
+        margin-top: 1em;
+    }
+
+    strong {
+        font-weight: tokens.$font-weight-bold;
+    }
+}
+
+dl {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-auto-rows: auto;
+    gap: 24px 48px;
+}
+
+.detail-list {
+    margin-top: 12px;
+    list-style-type: disc;
+    padding-left: 1.5em;
+
+    li {
+        margin-bottom: 8px;
+    }
+}
+
+.subfooter {
+    margin-top: 96px;
+}
