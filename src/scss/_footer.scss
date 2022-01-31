@@ -15,7 +15,15 @@ footer {
     }
 
     i {
+        width: 16px;
+        height: 16px;
+        display: inline-block;
         margin-right: tokens.$spacing-small;
+    }
+
+    dt {
+        display: flex;
+        align-items: center;
     }
 }
 

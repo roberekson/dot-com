@@ -107,7 +107,7 @@ dl {
     @include tokens.desktop {
         display: grid;
         grid-template-columns: auto 1fr;
-        grid-auto-rows: auto;
+        grid-auto-rows: 1.5rem;
         gap: tokens.$spacing-normal tokens.$spacing-large;
 
         dd {
