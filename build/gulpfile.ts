@@ -4,6 +4,8 @@ const sass = require('gulp-sass')(require('sass'));
 const ts = require('gulp-typescript');
 const { resolve } = require('path');
 
+const { TaskFunction, TaskFunctionCallback } = require('gulp');
+
 const paths = {
   html: resolve(__dirname, '../src/html'),
   images: resolve(__dirname, '../src/images'),
@@ -11,20 +13,20 @@ const paths = {
   public: resolve(__dirname, '../public'),
 }
 
-const buildImages = () => (
+const buildImages: typeof TaskFunction = () => (
   gulp.src(`${paths.images}/**/*`)
     .pipe(imagemin([
       imagemin.mozjpeg({ quality: 80, progressive: true }),
     ], { silent: true }))
     .pipe(gulp.dest(`${paths.public}/images`))
-)
+);
 
-const buildHtml = () => (
+const buildHtml: typeof TaskFunction = () => (
   gulp.src(`${paths.html}/**/*.html`)
     .pipe(gulp.dest(paths.public))
 );
 
-const buildScss = () => (
+const buildScss: typeof TaskFunction = () => (
   gulp.src(`${paths.scss}/**/*.scss`)
     .pipe(sass())
     .pipe(gulp.dest(`${paths.public}/css`))
