@@ -15,7 +15,7 @@ const buildImages = () => (
   gulp.src(`${paths.images}/**/*`)
     .pipe(imagemin([
       imagemin.mozjpeg({ quality: 80, progressive: true }),
-    ]))
+    ], { silent: true }))
     .pipe(gulp.dest(`${paths.public}/images`))
 )
 
