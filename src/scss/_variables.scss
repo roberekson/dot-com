@@ -7,4 +7,13 @@
     --secondary-color-dark: #{tokens.$color-secondary-dark};
     --background-color: #{tokens.$color-light};
     --foreground-color: #{tokens.$color-secondary-dark};
+
+    @media (prefers-color-scheme: dark) {
+        --background-color: #{tokens.$color-secondary-dark};
+        --foreground-color: #{tokens.$color-light};
+
+        footer {
+            --background-color: #{tokens.$color-light};
+        }
+    }
 }

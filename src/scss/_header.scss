@@ -30,6 +30,10 @@ header {
         width: 125px;
         height: 125px;
     }
+
+    @media (prefers-color-scheme: dark) {
+        border: 2px var(--foreground-color) solid;
+    }
 }
 
 .name {
