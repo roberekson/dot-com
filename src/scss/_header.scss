@@ -23,6 +23,13 @@ header {
     height: tokens.$image-size-profile-photo;
     border-radius: 50%;
     grid-area: photo;
+    width: 200px;
+    height: 200px;
+
+    @include tokens.desktop {
+        width: 125px;
+        height: 125px;
+    }
 }
 
 .name {
