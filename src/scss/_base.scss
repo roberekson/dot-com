@@ -1,0 +1,117 @@
+@use './tokens';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--foreground-color);
+    border-top: 10px var(--primary-color) solid;
+    font-family: 'Inter', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a {
+    color: var(--secondary-color);
+
+    :hover {
+        color: var(--secondary-color-light);
+    }
+}
+
+section {
+    margin: tokens.$spacing-xlarge 0 0 0;
+
+    &.professional {
+        margin-top: tokens.$spacing-large;
+    }
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: tokens.$font-weight-light;
+}
+
+h2 {
+    font-size: max(calc(100vw / 20), calc(320px / 20));
+    font-weight: tokens.$font-weight-bold;
+    
+    @include tokens.desktop {
+        font-size: 1.8rem;
+    }
+}
+
+h3 {
+    font-size: 1.8rem;
+    font-weight: tokens.$font-weight-regular;
+    margin-bottom: tokens.$spacing-large;;
+}
+
+h4 {
+    font-size: 1.4rem;
+    font-weight: tokens.$font-weight-bold;
+    margin-bottom: tokens.$spacing-xsmall;
+    margin-top: 48px;
+}
+
+h5, .heading5 {
+    font-size: 1.2rem;
+    font-weight: tokens.$font-weight-light;
+    line-height: 1.5em;
+    margin-bottom: tokens.$spacing-xsmall;
+
+
+    strong {
+        font-weight: tokens.$font-weight-medium;
+    }
+
+    @include tokens.desktop {
+        br {
+            display: none;
+        }
+        
+        strong::after {
+            content: '|';
+            font-weight: tokens.$font-weight-light;
+            margin: 0 tokens.$spacing-xsmall;
+        }
+    }
+}
+
+p {
+    line-height: 1.5em;
+    font-weight: tokens.$font-weight-light;
+
+    + p {
+        margin-top: 1em;
+    }
+
+    strong {
+        font-weight: tokens.$font-weight-bold;
+    }
+}
+
+dl {
+    display: flex;
+    flex-direction: column;
+    gap: tokens.$spacing-xsmall;
+
+    dd {
+        margin-bottom: tokens.$spacing-normal;
+    }
+
+    @include tokens.desktop {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-auto-rows: auto;
+        gap: tokens.$spacing-normal tokens.$spacing-large;
+
+        dd {
+            margin-bottom: 0;
+        }
+    }
+}

@@ -1,0 +1,11 @@
+@use './tokens';
+
+.detail-list {
+    margin-top: tokens.$spacing-small;
+    list-style-type: disc;
+    padding-left: 1.5em;
+
+    li {
+        margin-bottom: tokens.$spacing-xsmall;
+    }
+}

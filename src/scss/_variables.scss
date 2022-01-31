@@ -1,0 +1,10 @@
+@use './tokens';
+
+:root {
+    --primary-color: #{tokens.$color-primary};
+    --secondary-color-light: #{tokens.$color-secondary-light};
+    --secondary-color: #{tokens.$color-secondary};
+    --secondary-color-dark: #{tokens.$color-secondary-dark};
+    --background-color: #{tokens.$color-light};
+    --foreground-color: #{tokens.$color-secondary-dark};
+}

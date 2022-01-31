@@ -1,0 +1,42 @@
+@use './tokens';
+
+header {
+    padding: 0 tokens.$spacing-gutter;
+    margin-top: tokens.$spacing-large;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: tokens.$spacing-xsmall;
+
+    @include tokens.desktop {
+        display: grid;
+        grid-template-rows: auto min-content;
+        grid-template-columns: tokens.$image-size-profile-photo auto;
+        grid-template-areas: "photo name"
+                             "photo title";
+        gap: tokens.$spacing-xxsmall tokens.$spacing-normal;
+    }
+}
+
+.profile-photo {
+    width: tokens.$image-size-profile-photo;
+    height: tokens.$image-size-profile-photo;
+    border-radius: 50%;
+    grid-area: photo;
+}
+
+.name {
+    grid-area: name;
+
+    @include tokens.desktop {
+        align-self: end;
+    }
+}
+
+.title {
+    grid-area: title;
+
+    @include tokens.desktop {
+        align-self: start;
+    }
+}

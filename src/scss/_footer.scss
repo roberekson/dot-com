@@ -1,0 +1,35 @@
+@use './tokens';
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    padding-bottom: tokens.$spacing-xlarge;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: tokens.$spacing-xlarge;
+
+    a {
+        color: var(--background-color);
+    }
+
+    i {
+        margin-right: tokens.$spacing-small;
+    }
+}
+
+.contact {
+    padding: 0 tokens.$spacing-gutter;
+}
+
+.subfooter {
+    margin-top: tokens.$spacing-xlarge;
+    line-height: 1.5em;
+
+    @include tokens.desktop {
+        br {
+            display: none;
+        }
+    }
+}

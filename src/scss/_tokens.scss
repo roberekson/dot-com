@@ -1,5 +1,4 @@
-$color-primary: '#f46036';
-$color-primary-dark: '#e84a1e';
+$color-primary: '#e44b21';
 
 $color-secondary-light: '#3d4ea4';
 $color-secondary: '#212a59';
@@ -12,3 +11,21 @@ $font-weight-regular: 400;
 $font-weight-medium: 500;
 $font-weight-semibold: 600;
 $font-weight-bold: 800;
+
+$image-size-profile-photo: 125px;
+
+$spacing-size: 4px;
+
+$spacing-xxsmall: $spacing-size;
+$spacing-xsmall: $spacing-size * 2;
+$spacing-small: $spacing-size * 3;;
+$spacing-normal: $spacing-size * 6;
+$spacing-large: $spacing-size * 12;
+$spacing-xlarge: $spacing-size * 24;
+$spacing-gutter: $spacing-normal;
+
+@mixin desktop {
+    @media (min-width: 481px) {
+        @content;
+    }
+}
