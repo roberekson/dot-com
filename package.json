@@ -5,6 +5,7 @@
   "scripts": {
     "build": "tsc ./build/gulpfile.ts && npx gulp build --gulpfile ./build/gulpfile.js",
     "watch": "tsc ./build/gulpfile.ts && npx gulp watch --gulpfile ./build/gulpfile.js",
+    "clean": "rm -rf public/*",
     "start": "npm run build && docker compose up -d",
     "stop": "docker compose stop",
     "destroy": "docker composer down",
