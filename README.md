@@ -54,6 +54,7 @@ No project is ever finished, right? And what better place to keep toying around 
 
 * Page navigation
 * Sticky header
+* Add super cool 404 page
 * Unit testing for any eventually-added JavaScript
 * Publishing pipeline using Github's Travis or a Jenkins container
 * 2000s era web counter?
