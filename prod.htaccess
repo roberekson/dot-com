@@ -1,0 +1,4 @@
+# Force SSL
+RewriteEngine on
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://roberekson.com/$1 [R,L]
